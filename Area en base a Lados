@@ -1,0 +1,25 @@
+// areaenbasealados.cpp : Defines the entry point for the console application.
+// FELIPE MAYSER
+// 03/09/2013
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+#include "math.h"
+
+int main()
+{
+	float a, b, c, S, A;
+    printf ("CALCULO DE EL AREA DEL TRIANGULO \n");
+	printf("INTRODUZCA EL LADO A: ");
+	scanf_s("%f", &a);
+	printf("INTRODUZCA EL LADO B: ");
+	scanf_s("%f", &b);
+	printf("INTRODUZCA EL LADO C: ");
+	scanf_s("%f",&c);
+	S = ((a+b+c)/2);
+	A = sqrt(S*(S-a)*(S-b)*(S-c));
+	printf ("EL AREA DEL TRIANGULO EN BASE A SUS LADOS ES: %f \n", A);
+	getch ();
+	return 0;
+}

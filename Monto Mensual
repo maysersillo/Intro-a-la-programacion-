@@ -1,0 +1,32 @@
+// El Percebe Feo...TE AMOOOOOO!.cpp : Defines the entry point for the console application.
+// FELIPE MAYSER	
+// 12/09/2013
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+int main()
+{
+	float a, b, c, TOTMES;
+
+
+	printf ("INGRESE LAS VENTA DE a: \n");
+    scanf_s("%f", &a);
+
+	printf ("INGRESE LAS VENTA DE b: \n");
+    scanf_s("%f", &b);
+
+	printf ("INGRESE LAS VENTA DE c: \n");
+    scanf_s("%f", &c);
+
+
+	TOTMES = ((a+b+c)*4);
+
+
+	printf ("LAS VENTAS TOTALES DEL MES SON: %f", TOTMES);
+
+	getch ();
+	return 0;
+}

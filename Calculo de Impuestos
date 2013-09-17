@@ -15,17 +15,18 @@ int main()
 	printf("\n:::::#####CALCULO DE IMPUESTOS SUELDO BASICO#####::::: \n \n");
 	printf("INGRESE EL SUELDO BASICO: \n");
 	scanf_s("%d", &sb);
-	printf("\nINGRESE EL SUELDO DEL ESCLAVO: \n");
+	printf("\nINGRESE EL SUELDO DEL TRABAJADOR: \n");
 	scanf_s("%d", &s);
 
 	if (s > (2*sb))
 	{
 		Imp = (s*0.13);
-	printf("\nEL IMPUESTO DE ESTE ESCLAVO ES DE: %f \n \n", Imp);
+		
+	printf("\nEL IMPUESTO DE ESTE TRABAJADOR ES DE: %f \n \n", Imp);
 	}
 	else
 	{
-		printf("\nESTE ESCLAVO NO PAGA IMPUESTOS \n");
+		printf("\nNO PAGA IMPUESTOS \n");
 		}
 	getch ();
 	return 0;

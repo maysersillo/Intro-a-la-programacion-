@@ -1,0 +1,41 @@
+// IMPUESTOS SUELDOS BASICOS.cpp : Defines the entry point for the console application.
+// FELIPE MAYSER
+// 17/09/2013
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+int main()
+{
+
+	int s, sb;
+	float Imp, AFP, TOTImp;
+	
+	printf("\n:::::#####CALCULO DE IMPUESTOS SUELDO BASICO#####::::: \n \n");
+	printf("INGRESE EL SUELDO BASICO: \n");
+	scanf_s("%d", &sb);
+	printf("\nINGRESE EL SUELDO DEL TRABAJADOR: \n");
+	scanf_s("%d", &s);
+	
+	if (s > (2*sb))
+	{
+		Imp = (s*0.13);
+		AFP = (s*0.12);
+		TOTImp = (Imp + AFP);
+
+		printf("\nEL IMPUESTO ES: %f", Imp);
+		printf("\nEL AFP ES: %f", AFP);
+		printf("\nEL IMPUESTO TOTAL ES DE: %f \n \n", TOTImp);
+	}
+	
+	else
+	{
+		printf("\nNO PAGA IMPUESTOS \n");
+		printf("\nNO PAGA AFP \n");
+	}
+	
+	getch ();
+	return 0;
+}

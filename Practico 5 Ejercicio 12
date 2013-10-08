@@ -1,0 +1,79 @@
+// gdls.cpp : Defines the entry point for the console application.
+// FELIPE MAYSER
+// 08/10/2013
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+
+int main()
+{
+	float pp, sp, tp, ef, nf, np, f, na, prom, c;
+
+	printf("\n:::### CALCULO DE NOTAS Y PROMEDIOS ###:::\n");
+
+	printf("\nINGRESE EL NUMERO DE ALUMNOS: \n");
+	scanf_s("%f", &na);
+
+	for(c=1; c<=na; c++)
+	{
+
+		printf("\nINGRESE LAS FALTAS DEL ALUMNO: \n");
+		scanf_s("%f", &f);
+
+		if (f>10)
+		{
+			printf("\nINGRESE LA NOTA DEL PRIMER PARCIAL: \n");
+			scanf_s("%f", &pp);
+		
+			printf("\nINGRESE LA NOTA DEL SEGUNDO PARCIAL: \n");
+			scanf_s("%f", &sp);
+
+			printf("\nINGRESE LA NOTA DEL TERCER PARCIAL: \n");
+			scanf_s("%f", &tp);
+
+			printf("\nINGRESE LA NOTA PRACTICA: \n");
+			scanf_s("%f", &np);
+
+			printf("\nEL ALUMNO NO TIENE NOTA DEL EXAMEN FINAL \n");
+
+			nf = ((pp+sp+tp)*0.13)+ np;
+
+			printf("\nLA NOTA DEL ALUMNO ES: %f\n", nf);
+		}
+
+		else 
+		{
+			printf("\nINGRESE LA NOTA DEL PRIMER PARCIAL: \n");
+			scanf_s("%f", &pp);
+		
+			printf("\nINGRESE LA NOTA DEL SEGUNDO PARCIAL: \n");
+			scanf_s("%f", &sp);
+
+			printf("\nINGRESE LA NOTA DEL TERCER PARCIAL: \n");
+			scanf_s("%f", &tp);
+
+			printf("\nINGRESE LA NOTA PRACTICA: \n");
+			scanf_s("%f", &np);
+
+			printf("\nINGRESE LA NOTA DEL EXAMEN FINAL: \n");
+			scanf_s("%f", &ef);
+
+			nf = ((pp+sp+tp)*0.13)+(ef*0.20)+ np;
+
+			printf("\nLA NOTA DEL ALUMNO ES: %f\n", nf);
+		}
+		if(nf>=51)
+		{
+			printf("\nEL ALUMNO ESTA APROBADO EN ESTA MATERIA \n");
+		}
+		else
+		{
+			printf("\nEL ALUMNO ESTA REPROBADO EN ESTA MATERIA \n");
+		}
+	}
+
+	getch ();
+	return 0;
+}

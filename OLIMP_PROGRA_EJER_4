@@ -1,0 +1,70 @@
+// OLIMPIADAS_PROGRA_2da_PARTE.cpp : Defines the entry point for the console application.
+// FELIPE MAYSER
+// 05/11/2013
+
+#include "stdafx.h"
+#include "stdio.h"
+#include "conio.h"
+
+float POTENCIA_LOL (int x, int i);
+float FACTORIAL_LOL (int i);
+
+int main()
+{
+	int x, n, i, SIGNILLO;
+	float s;
+
+	printf("INGRESE x: \n");
+	scanf_s("%d", &x);
+
+	printf("INGRESE n: \n");
+	scanf_s("%d", &n);
+
+	s=0;
+	SIGNILLO=1;
+
+	for(i=1; i<=n; i=i+2)
+	{
+		s = s+(SIGNILLO*POTENCIA_LOL (x, i)/FACTORIAL_LOL (i));
+
+		printf("\nPOTENCIA= %f \n", POTENCIA_LOL (x, i));
+		printf("FACTORIAL= %f\n", FACTORIAL_LOL (i));
+
+		SIGNILLO=SIGNILLO*(-1);
+
+	}
+
+	printf("\nLA SUMATORIA ES: %f", s);
+
+	getch ();
+	return 0;
+}
+
+
+// SUBPROGRAMAS
+// SUBPROGRAMAS EVERYWHERE
+
+float POTENCIA_LOL (int x, int i)
+{
+	int j, p;
+	p=1;
+	
+	for (j=1; j<=i; j++)
+	{
+		p = p*x;
+	}
+	return p;
+}
+
+
+float FACTORIAL_LOL (int i)
+{
+	int j, p;
+	p=1;
+	
+	for (j=1; j<=i; j++)
+	{
+		p = p*j;
+	}
+	return p;
+}
